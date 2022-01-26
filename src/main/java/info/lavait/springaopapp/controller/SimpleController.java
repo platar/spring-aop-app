@@ -1,5 +1,8 @@
 package info.lavait.springaopapp.controller;
 
+import info.lavait.springaopapp.aop.AdditionalAuthentication;
+import info.lavait.springaopapp.aop.AdditionalCredentials;
+import info.lavait.springaopapp.aop.AdditionalCredentialsDto;
 import info.lavait.springaopapp.service.SimpleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +25,8 @@ public class SimpleController {
     }
 
     @PostMapping("/somethingElse")
-    public String getSomethingElse() {
+    @AdditionalAuthentication
+    public String getSomethingElse(@RequestBody AdditionalCredentialsDto additionalCredentialsDto) {
         log.info("Controller: getSomethingElse");
         return simpleService.getSomethingElseFromService();
     }

@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "506ce54f-95fb-4761-8866-eaf91ac0e6ef",
+		"name": "spring-aop-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "somethingElse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test\",\r\n    \"password\" : \"pass\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/somethingElse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"somethingElse"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
